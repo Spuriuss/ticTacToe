@@ -1,0 +1,123 @@
+:root {
+	--black: rgb(10,10,10);
+}
+
+@font-face {
+	font-family: roboto;
+	src: url(../fonts/roboto.ttf);
+}
+
+
+
+html {
+	position: relative;
+}
+body {
+	margin: 0; padding: 20px;
+	font-family: roboto;
+}
+a {
+	text-decoration: none; color: initial;
+}
+input {
+	height: 30px; width: 200px;
+}
+input:focus, textarea:focus {
+	outline: none;
+}
+
+.centerText {
+	position: absolute; top: 50%; transform: translate(0,-50%); 
+	width: 100%; text-align: center;
+}
+.center {
+	position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%);
+}
+.line {
+	position: relative;
+}
+	.rightSide {
+		height: 100%;
+		position: absolute; top: 0; right: 0;
+	}
+@keyframes loading {
+	0% {transform: translate(-50%,-50%) rotate(0);}
+	100% {transform: translate(-50%,-50%) rotate(360deg);}
+}
+.loadingAnimation {
+	width: 30px; height: 30px;
+	position: absolute; left: 50%; top: 50%; transform: translate(-50%,-50%);
+	background: url(../images/loadingAnimation.png) no-repeat; background-size: contain; background-position: center;
+	animation: loading linear 2s infinite;
+	display: none;
+}
+.button {
+	position: relative; display: inline-block;
+	width: 140px; height: 40px; border-radius: 3px;
+	background: black; color: white; font-family: roboto; font-size: 16px;
+	cursor: pointer; user-select: none;
+}
+.lilArrow {
+	position: relative;
+	width: 15px; height: 15px;
+}
+	.lilArrow > .one {
+		width: 100%; border-bottom: 1px solid black;
+		position: absolute; top: calc(50% - 1px); transform: rotate(-45deg);
+		right: -35.4%;
+	}
+	.lilArrow > .two {
+		width: 100%; border-bottom: 1px solid black;
+		position: absolute; top: calc(50% - 1px); transform: rotate(45deg);
+		left: -35.4%;
+	}
+.searchIcon {
+	position: relative;
+	width: 25px; height: 25px;
+}
+	.searchIcon > .circle {
+		width: 80%; height: 80%; border-radius: 100%;
+		border: 1px solid black;
+		position: absolute; top: 0; left: 0;
+	}
+	.searchIcon > .line {
+		width: 20%; height: 1px;
+		border-bottom: 1px solid black;
+		position: absolute; bottom: 16%; right: 8%; transform: rotate(45deg);
+	}
+.lilPlus {
+	position: relative;
+	width: 15px; height: 15px;
+}
+	.lilPlus > .one {
+		width: 100%; border-bottom: 3px solid black;
+		position: absolute; left: 0; top: calc(50% - 3px);
+	}
+	.lilPlus > .two {
+		height: 100%; border-right: 3px solid black;
+		position: absolute; top: 0; left: calc(50% - 3px);
+	}
+.lilCross {
+	position: relative;
+	width: 15px; height: 15px;
+}
+	.lilCross > .one {
+		width: 141.42%; height: 3px;
+		position: absolute; left: 50%; top: 50%; transform: translate(-50%,-50%) rotate(45deg);
+		background: black;
+	}
+	.lilCross > .two {
+		width: 141.42%; height: 3px;
+		position: absolute; left: 50%; top: 50%; transform: translate(-50%,-50%) rotate(-45deg);
+		background: black;
+	}
+#main {
+	width: 1200px; max-width: calc(100% - 60px);
+	position: relative; left: 50%; transform: translate(-50%,0);
+	padding-top: 50px;
+}
+
+body::after {
+   position: absolute; width: 0; height: 0; overflow: hidden;
+   content: url(../images/loadingAnimation.png); 
+}

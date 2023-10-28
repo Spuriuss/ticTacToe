@@ -1,0 +1,51 @@
+:root {
+	--ticTacThikness: 5px;
+}
+
+
+
+#field {
+	width: 420px; height: 420px;
+	position: absolute; left: 50%; top: 50%; transform: translate(-50%,-50%);
+	border: 1px solid black; padding: 0;
+}
+	.cell {
+		display: inline-block; box-sizing: border-box; position: relative;
+		width: calc(100% / 3); height: calc(100% / 3);
+		border: 1px solid black;
+		cursor: pointer; user-select: none;
+	}
+	
+	
+	
+	.crossOne {
+		width: 120%; height: var(--ticTacThikness);
+		position: absolute; left: 50%; top: 50%; transform: translate(-50%,-50%) rotate(45deg);
+		background: black; border-radius: 10px;
+	}
+	.crossTwo {
+		width: 120%; height: var(--ticTacThikness);
+		position: absolute; left: 50%; top: 50%; transform: translate(-50%,-50%) rotate(-45deg);
+		background: black; border-radius: 10px;
+	}
+	
+	.nullOne {
+		width: 80%; height: 80%;
+		position: absolute; left: 50%; top: 50%; transform: translate(-50%,-50%);
+		border-radius: 100%; background: black;
+	}
+		.nullTwo {
+			width: calc(100% - var(--ticTacThikness)*2); height: calc(100% - var(--ticTacThikness)*2);
+			position: absolute; left: 50%; top: 50%; transform: translate(-50%,-50%);
+			border-radius: 100%; background: white;
+		}
+	
+	#logoutButton {
+		position: absolute; right: 20px; top: 20px;
+	}
+		#logoutButton img {
+			width: 30px;
+		}
+	#newGameButton {
+		margin-top: 20px;
+	}

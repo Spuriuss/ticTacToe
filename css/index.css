@@ -1,0 +1,10 @@
+#main {
+	text-align: center;
+}
+	#main > div {
+		display: inline-block;
+	}
+	
+	#loginButton {
+		margin-top: 20px;
+	}
